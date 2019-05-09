@@ -1,0 +1,24 @@
+<h1>Angular `Consuming Rest Api </h1>
+<hr />
+<br>
+<table *ngFor="let data of httpdata">
+  <thead>
+    <tr>Country Details</tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Country Name</td>
+      <td>{{data.name}}</td>
+    </tr>
+    <tr *ngIf='showMore'>
+      <td>Country Capital</td>
+      <td>{{data.capital}}</td>
+    </tr>
+    <tr>
+      <td>Country Code</td>
+      <td>{{data.callingCodes}}</td>
+    </tr>
+  </tbody>
+
+</table>
+<button (click)="showData()">Toogle</button>
